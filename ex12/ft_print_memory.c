@@ -6,7 +6,7 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 19:29:21 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/30 19:49:29 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 20:30:43 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ void	ft_putaddr_hex(void *addr)
 
 void	*ft_print_memory(void *addr, unsigned int size)
 {
-	int index;
-	int max_size;
+	unsigned int	index;
+	unsigned int	max_size;
 
 	index = 0;
 	while (index < size)

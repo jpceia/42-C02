@@ -6,7 +6,7 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 18:29:53 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/30 20:21:44 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 20:29:31 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int index;
 
 	index = 0;
-	while (src[i] && index < n)
+	while (src[index] && index < n)
 	{
 		dest[index] = src[index];
 		index++;
