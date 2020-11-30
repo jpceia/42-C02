@@ -12,15 +12,16 @@
 
 int	ft_str_is_numeric(char *str)
 {
-	while (*src != 0)
+	while (*str != 0)
 	{
-		if(*src >= 48 && *src <= 57)
+		if(*str >= 48 && *str <= 57)
 		{
 		}
 		else
 		{
 			return (0);
 		}
+		str++;
 	}
 	return (1);
 }

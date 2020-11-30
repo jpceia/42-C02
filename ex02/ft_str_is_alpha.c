@@ -12,20 +12,19 @@
 
 int	ft_str_is_alpha(char *str)
 {
-	while (*src != 0)
+	while (*str != 0)
 	{
-		if(*src >= 65 && *src <= 90)
+		if(*str >= 65 && *str <= 90)
 		{
 		}
-        else if(*src >= 97 && *src <= 122)
-        {
-        }
+        	else if(*str >= 97 && *str <= 122)
+        	{
+        	}
 		else
 		{
 			return (0);
 		}
-        src++;
+		str++;
 	}
-	
 	return (1);
 }

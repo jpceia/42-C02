@@ -10,19 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	is_uppercase_alpha(char c)
+#include <stdio.h>
+
+int	ft_is_uppercase(char c)
 {
 	return (c >= 65 && c <= 90); 
 }
 
-int		is_alpha(char c)
+int	ft_is_lowercase(char c)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	return (c >= 97 && c <= 122);
 }
 
-int		is_blank(char c)
+int	ft_is_number(char c)
 {
-	return (c == 32)
+	return (c >= 48 && c <= 57);
+}
+
+int	ft_is_alphanumeric(char c)
+{
+	return (ft_is_uppercase(c) ||
+		ft_is_lowercase(c) ||
+		ft_is_number(c));
+}
 
 char	*ft_strcapitalize(char *str)
 {
@@ -31,17 +41,24 @@ char	*ft_strcapitalize(char *str)
 	int prev_blank;
    
 	prev_blank = 1;
-	i = 0
-	while (*src != 0)
+	i = 0;
+	while (str[i] != 0)
 	{
-		c = *(src + i);
-		if (!is_alpha(c))
-		{
+		if (ft_is_lowercase(str[i]) && prev_blank)
+			str[i] = str[i] - 32;
+		if (ft_is_uppercase(str[i]) && !prev_blank)
+			str[i] = str[i] + 32;
+		prev_blank = 0;
+		if (!ft_is_alphanumeric(str[i]))
 			prev_blank = 1;
-		}
-		else if(
-		*(src + i) = *(src + i) - 32;
 		i++;
 	}
-	return (src);
+	return (str);
+}
+
+int	main()
+{
+	char s[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+	ft_strcapitalize(s);
+	puts(s);
 }

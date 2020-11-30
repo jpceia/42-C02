@@ -13,18 +13,18 @@
 char	*ft_strupcase(char *str)
 {
 	int i;
-    char c;
+	char c;
 
-    i = 0;
-    c = *str;
+	i = 0;
+	c = *str;
 	while (c != 0)
 	{
-        if(c >= 97 && c <= 122)
-        {
-            *(str + i) = c - 32;
-        }
-        i++;
-        c = *(str + i);
+        	if(c >= 97 && c <= 122)
+		{
+			str[i] = c - 32;
+		}
+		i++;
+		c = str[i];
 	}
 	return (str);
 }
