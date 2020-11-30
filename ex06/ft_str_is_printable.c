@@ -12,18 +12,15 @@
 
 int	ft_str_is_printable(char *str)
 {
-	int i;
-
 	while (*src != 0)
 	{
-		if((*src >= 32 && *src <= 126)
-		{
-		}
+		if(*src >= 32 && *src <= 126)
+        {
+        }
 		else
 		{
 			return (0);
 		}
 	}
-	
 	return (1);
 }

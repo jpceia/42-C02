@@ -12,8 +12,6 @@
 
 int	ft_str_is_uppercase(char *str)
 {
-	int i;
-
 	while (*src != 0)
 	{
 		if(*src >= 65 && *src <= 90)
@@ -24,6 +22,5 @@ int	ft_str_is_uppercase(char *str)
 			return (0);
 		}
 	}
-	
 	return (1);
 }

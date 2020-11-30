@@ -12,8 +12,6 @@
 
 int	ft_str_is_numeric(char *str)
 {
-	int i;
-
 	while (*src != 0)
 	{
 		if(*src >= 48 && *src <= 57)
@@ -24,6 +22,5 @@ int	ft_str_is_numeric(char *str)
 			return (0);
 		}
 	}
-	
 	return (1);
 }

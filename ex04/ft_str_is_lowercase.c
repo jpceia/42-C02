@@ -12,8 +12,6 @@
 
 int	ft_str_is_lowercase(char *str)
 {
-	int i;
-
 	while (*src != 0)
 	{
 		if(*src >= 97 && *src <= 122)
@@ -24,6 +22,5 @@ int	ft_str_is_lowercase(char *str)
 			return (0);
 		}
 	}
-	
 	return (1);
 }
