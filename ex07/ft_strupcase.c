@@ -6,7 +6,7 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 18:29:53 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/30 20:24:03 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 20:35:54 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	ft_char_upcase(char c)
 	return (ft_char_is_lowercase(c) ? c - 32 : c);
 }
 
-char	*ft_str_upercase(char *str)
+char	*ft_strupcase(char *str)
 {
 	unsigned int index;
 
