@@ -6,21 +6,21 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 18:29:53 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/28 20:00:23 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 16:01:03 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_char_is_numeric(char c)
+{
+	return (c >= '0' && c <= '9');
+}
 
 int	ft_str_is_numeric(char *str)
 {
 	while (*str != 0)
 	{
-		if(*str >= 48 && *str <= 57)
-		{
-		}
-		else
-		{
+		if (!ft_char_is_numeric(*str))
 			return (0);
-		}
 		str++;
 	}
 	return (1);

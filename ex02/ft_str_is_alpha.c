@@ -6,24 +6,21 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 18:29:53 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/28 19:57:39 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 15:59:29 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_char_is_alpha(char c)
+{
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'z'));
+}
 
 int	ft_str_is_alpha(char *str)
 {
 	while (*str != 0)
 	{
-		if(*str >= 65 && *str <= 90)
-		{
-		}
-        	else if(*str >= 97 && *str <= 122)
-        	{
-        	}
-		else
-		{
+		if (!ft_char_is_alpha(*str))
 			return (0);
-		}
 		str++;
 	}
 	return (1);
