@@ -6,25 +6,29 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 18:29:53 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/28 20:07:53 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 16:14:04 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_lowcase(char *str)
+int		ft_char_is_uppercase(char c)
+{
+	return (c >= 'A' && c <= 'Z');
+}
+
+char	ft_char_lowcase(char c)
+{
+	return (ft_char_is_uppercase(c) ? c + 32 : c);
+}
+
+char	*ft_strlowcase(char *str)
 {
 	int i;
-	char c;
 
 	i = 0;
-	c = *str;
-	while (c != 0)
+	while (str[i] != 0)
 	{
-        	if(c >= 65 && c <= 90)
-		{
-			str[i] = c + 32;
-		}
+		str[i] = ft_char_lowcase(str[i]);
 		i++;
-		c = str[i];
 	}
 	return (str);
 }

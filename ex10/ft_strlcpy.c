@@ -6,29 +6,23 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 18:29:53 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/28 18:58:32 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 19:52:48 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int i;
+	unsigned int index;
 
-	i = 0;
-	while ((src[i] != 0) && (i < size - 1))
+	index = 0;
+	while (src[index] || (i < size - 1))
 	{
-		dest[i] = src[i];
-		i++;
+		dest[index] = src[index];
+		index++;
 	}
-	while (i < size - 1)
-	{
-		dest[i] = 0;
-		i++;
-	}
-	if (size > 0)
-		dest[size - 1] = 0;
-	i = 0;
-	while (src[i] != 0)
-		i++;
-	return (i);
+	dest[index] = 0;
+	index = 0;
+	while (src[index])
+		index++;
+	return (index);
 }
