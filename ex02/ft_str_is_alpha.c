@@ -6,7 +6,7 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 18:29:53 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/30 15:59:29 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 20:22:22 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_char_is_alpha(char c)
 
 int	ft_str_is_alpha(char *str)
 {
-	while (*str != 0)
+	while (*str)
 	{
 		if (!ft_char_is_alpha(*str))
 			return (0);

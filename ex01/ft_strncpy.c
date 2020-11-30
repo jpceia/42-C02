@@ -6,25 +6,24 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 18:29:53 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/28 18:58:32 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 20:21:44 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+	unsigned int index;
 
-	i = 0;
-	while ((*src != 0) && (i < n))
+	index = 0;
+	while (src[i] && index < n)
 	{
-		*(dest + i) = *src;
-		i++;
-		src++;
+		dest[index] = src[index];
+		index++;
 	}
-	while (i < n)
+	while (index < n)
 	{
-		*(dest + i) = 0;
-		i++;
+		dest[index] = 0;
+		index++;
 	}
 	return (dest);
 }

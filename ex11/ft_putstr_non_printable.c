@@ -6,7 +6,7 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 16:26:30 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/30 16:27:34 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 20:25:52 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_putchar_hex(char c)
 
 void	ft_str_non_printable(char *str)
 {
-	while (*str != 0)
+	while (*str)
 	{
 		if (ft_char_is_printable(*str))
 			ft_putchar(*str);

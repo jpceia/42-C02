@@ -6,21 +6,20 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 18:29:53 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/28 18:37:38 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 20:20:28 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int i;
+	unsigned int index;
 
-	i = 0;
-	while (*src != 0)
+	index = 0;
+	while (src[i])
 	{
-		*(dest + i) = *src;
+		dest[index] = src[index];
 		i++;
-		src++;
 	}
-	*(dest + i) = '\0';
+	dest[index] = '\0';
 	return (dest);
 }
