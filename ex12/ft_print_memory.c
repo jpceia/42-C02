@@ -6,7 +6,7 @@
 /*   By: jceia <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 19:29:21 by jceia             #+#    #+#             */
-/*   Updated: 2020/11/30 19:36:23 by jceia            ###   ########.fr       */
+/*   Updated: 2020/11/30 19:49:29 by jceia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_putstr_hex(char *str, unsigned int size)
 	while (str[index] && index < size)
 	{
 		if (index % 2 == 0)
-			write(1, ' ', 1);
+			write(1, " ", 1);
 		ft_putchar_hex(str[index]);
 		index++;
 	}
@@ -47,9 +47,9 @@ void	ft_putstr(char *str, unsigned int size)
 	while (str[index] && index < size)
 	{
 		if (str[index] >= 32 && str[index] <= 126)
-			write(1, str[index], 1);
+			write(1, &str[index], 1);
 		else
-			write(1, '.', 1);
+			write(1, ".", 1);
 		index++;
 	}
 }
@@ -85,11 +85,11 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	{
 		max_size = size < 16 ? size : 16;
 		ft_putaddr_hex(addr);
-		write(1, ':', 1);
+		write(1, ":", 1);
 		ft_putstr_hex(addr, max_size);
-		write(1, ' ', 1);
+		write(1, " ", 1);
 		ft_putstr(addr, max_size);
-		write(1, '\n', 1);
+		write(1, "\n", 1);
 		addr += 16;
 		index += 16;
 	}
